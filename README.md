@@ -42,16 +42,20 @@ $ npm run test:cov
 
 - ### Create User
 
-
+```
     
 	Method: POST
 	Url: "/auth/login"
 	content-type: application/json
 	body = {
-        username: string ,
+        firstName: string ,
+	lastName: string ,
+	email: string ,
         password: string
     }
-	
+```	
+
+
 
 - ### Login
 
