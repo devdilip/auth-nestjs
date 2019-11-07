@@ -17,7 +17,7 @@ export class UserContrller {
 
     @UseGuards(AuthGuard('jwt'))
     @Get(':id')
-    async getProfile(@Param('id') userId: string) {
+    async getUserDetails(@Param('id') userId: string) {
         const user = await this.userService.findById(userId);
         if (user === undefined) {
             throw new NotFoundException('User details not found');
