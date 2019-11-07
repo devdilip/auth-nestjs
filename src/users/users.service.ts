@@ -29,8 +29,8 @@ export class UsersService {
         });
     }
 
-    async createUser(name: string, username: string, email: string, password: string): Promise<User> {
-        const user = new User(name, username, email, password);
+    async createUser(firstName: string, lastName: string, email: string, password: string): Promise<User> {
+        const user = new User(firstName, lastName, email, password);
         return await this.userRepository.save(user);
     }
 

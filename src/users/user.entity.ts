@@ -7,10 +7,10 @@ export class User {
   id: string;
 
   @Column()
-  name: string;
+  firstName: string;
 
-  @Column({default: ''})
-  username: string;
+  @Column()
+  lastName: string;
 
   @Column()
   email: string;
@@ -23,9 +23,9 @@ export class User {
   password: string;
 
   
-  constructor(name: string, username: string, email: string, password: string){
-      this.name = name;
-      this.username = username;
+  constructor(firstName: string, lastName: string, email: string, password: string){
+      this.firstName = firstName;
+      this.lastName = lastName;
       this.email = email;
       this.password = password;
   }

@@ -8,11 +8,11 @@ export class UserContrller {
 
     @Post('register')
     async register(
-        @Body('name') name: string,
-        @Body('username') username: string,
+        @Body('firstName') firstName: string,
+        @Body('lastName') lastName: string,
         @Body('email') email: string,
         @Body('password') password: string) {
-        return this.userService.createUser(name, username, email, password);
+        return this.userService.createUser(firstName, lastName, email, password);
     }
 
     @UseGuards(AuthGuard('jwt'))
