@@ -45,7 +45,7 @@ $ npm run test:cov
 ```
     
 	Method: POST
-	Url: "/auth/login"
+	Url: "/user/register"
 	content-type: application/json
 	body = {
         firstName: string ,
